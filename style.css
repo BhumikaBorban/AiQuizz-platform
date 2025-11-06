@@ -1,0 +1,264 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: url("https://img.freepik.com/premium-photo/light-shadow-clock-darkness-timeout-concept_118019-332.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  scroll-behavior: smooth;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.75); /* Dark overlay */
+  z-index: -1;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #01021b;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00bfff;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0d2bf0;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background: linear-gradient(135deg, #000814, #001f3f); */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
+
+.hero button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: #00bfff;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #0099cc;
+}
+
+/* Features Section */
+.features {
+  padding: 80px 20px;
+  text-align: center;
+  /* background: #000814; */
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color:white;
+}
+
+.feature-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #000a14;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #021f3b;
+}
+
+/* Contact */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  /* background: #001f3f; */
+}
+
+.contact h2 {
+  color: #053a76;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  /* background: #000814; */
+  font-size: 0.9rem;
+  color: #aaa;
+}
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #000814;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Feedback form */
+.feedback {
+  margin-bottom: 20px;
+}
+
+.feedback h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.feedback form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+.feedback input, 
+.feedback textarea {
+  padding: 10px;
+  /* border: none; */
+ border-color: blue;
+  border-radius: 6px;
+  outline: none;
+  background: #0d0e0e;
+  color: white;
+}
+
+.feedback textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+.feedback button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #00bfff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feedback button:hover {
+  background: #315cdd;
+  box-shadow: 0 0 10px #7ecee9;
+}
+
+/* Smooth fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero animation */
+.hero h1, .hero p, .hero button {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.hero h1 { animation-delay: 0.3s; }
+.hero p { animation-delay: 0.6s; }
+.hero button { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button hover glow */
+.hero button:hover {
+  background: #0099cc;
+  box-shadow: 0 0 15px #00bfff;
+}
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #00bfff;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #cccccc;
+  line-height: 1.4;
+}
+.card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 8px #00bfff55);
+}

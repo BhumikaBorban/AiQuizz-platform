@@ -1,0 +1,121 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #020015;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+/* Close button fixed at top-right */
+.close-quiz {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: #fff;
+  background: #e74c3c; /* red button */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: background 0.2s;
+}
+
+.close-quiz:hover {
+  background: #c0392b;
+}
+
+
+
+/* Quiz container */
+.quiz-container {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(73, 127, 236, 0.2);
+  width: 400px;
+  text-align: center;
+}
+
+/* Heading */
+.quiz-container h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Quiz card */
+.quiz-card {
+  margin: 15px 0;
+}
+
+/* Options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  padding: 10px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.option-btn:hover {
+  background: #dce7ff;
+}
+
+/* Timer */
+.timer {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Next button */
+#next-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#next-btn:hover {
+  background: #3e8e41;
+}
+
+/* Result */
+#result-box {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#result-box button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  background: #2196F3;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#result-box button:hover {
+  background: #1976D2;
+}

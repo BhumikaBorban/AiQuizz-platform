@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrackExam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+    <div class="logo">
+  <img src="img\logo.png.jpg" alt="CrackExam Logo">
+  <span>CrackExam</span>
+</div>
+ 
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to CrackExam</h1>
+      <p>Test your knowledge, track your progress, and improve your preparation.</p>
+      <button onclick="goNextPage()">Start</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+<section id="features" class="features fade-in">
+  <h2>Why Choose CrackExam?</h2>
+  <div class="feature-box">
+    <div class="card">
+      <img src="img/books.png" alt="Multiple Subjects">
+      <h3>Multiple Subjects</h3>
+      <p>Practice quizzes across Math, Science, GK, and more – all in one place.</p>
+    </div>
+    <div class="card">
+      <img src="img/flash-on.png" alt="Instant Results">
+      <h3>Instant Results</h3>
+      <p>Get your score instantly after completing the quiz with detailed feedback.</p>
+    </div>
+    <div class="card">
+      <img src="img/track.png" alt="Track Progress">
+      <h3>Track Progress</h3>
+      <p>Monitor your improvement over time and identify your strengths & weaknesses.</p>
+    </div>
+    <div class="card">
+      <img src="img/multiple-devices.png" alt="Responsive">
+      <h3>Easy & Responsive</h3>
+      <p>Clean and mobile-friendly design so you can practice anytime, anywhere.</p>
+    </div>
+    <div class="card">
+      <img src="img/target.png" alt="Personalized">
+      <h3>Personalized Practice</h3>
+      <p>Choose quizzes by topic or difficulty level to focus on what matters most.</p>
+    </div>
+    <div class="card">
+      <img src="img/trophy.png" alt="Leaderboard">
+      <h3>Leaderboard & Motivation</h3>
+      <p>Challenge yourself, compete with friends, and stay motivated with rankings.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Us</h2>
+    <p>Email: support@crackexam.com</p>
+    <p>Follow us on social media for updates!</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+  <div class="feedback">
+    <h3>💬 Share Your Feedback</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Write your feedback..." required></textarea>
+      <button type="submit">Send Feedback</button>
+    </form>
+  </div>
+  <p>© 2025 CrackExam. All rights reserved.</p>
+</footer>
+<script>
+  function goNextPage() {
+    window.location.href = "quiz.html"; 
+  }
+
+  // Scroll reveal effect
+  const elements = document.querySelectorAll(".fade-in");
+  window.addEventListener("scroll", () => {
+    elements.forEach(el => {
+      const position = el.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+      if (position < screenHeight - 100) {
+        el.classList.add("show");
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
